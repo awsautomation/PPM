@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ProjectCharterMMMGroup" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6d27b0ba-3a97-4536-85e7-5c69803e41c5">
+	<property name="ireport.zoom" value="1.8150000000000004"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="padding_1">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2"/>
+	</style>
+	<style name="header" forecolor="#2F6CBF" backcolor="#FFFFFF" hAlign="Center" vAlign="Middle" fontName="Verdana" fontSize="12" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+	<style name="text" style="padding_1" forecolor="#333333" isBlankWhenNull="true" fontName="Verdana" fontSize="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+	<style name="headerBox" style="padding_1" forecolor="#000000" fill="Solid" pattern="" fontName="Verdana" fontSize="8" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+	<style name="box" style="padding_1" mode="Opaque" forecolor="#333333" backcolor="#F2F2F2" fill="Solid" fontName="Verdana" fontSize="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+			<pen lineWidth="0.25" lineColor="#333333"/>
+			<topPen lineWidth="0.25" lineColor="#333333"/>
+			<leftPen lineWidth="0.25" lineColor="#333333"/>
+			<bottomPen lineWidth="0.25" lineColor="#333333"/>
+			<rightPen lineWidth="0.25" lineColor="#333333"/>
+		</box>
+	</style>
+	<style name="footer" style="padding_1" fontSize="10" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+			<bottomPen lineWidth="0.25" lineColor="#333333"/>
+		</box>
+	</style>
+	<style name="importantBox" style="padding_1" mode="Opaque" forecolor="#333333" backcolor="#DBE5F1" fontName="Verdana" fontSize="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<pen lineWidth="0.25"/>
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+			<pen lineWidth="0.25" lineColor="#333333"/>
+			<topPen lineWidth="0.25" lineStyle="Solid" lineColor="#333333"/>
+			<leftPen lineWidth="0.25" lineStyle="Solid" lineColor="#333333"/>
+			<bottomPen lineWidth="0.25" lineStyle="Solid" lineColor="#333333"/>
+			<rightPen lineWidth="0.25" lineStyle="Solid" lineColor="#333333"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#F2F2F2" isBold="true">
+		<pen lineWidth="0.0" lineColor="#333333"/>
+		<box>
+			<pen lineWidth="0.25" lineColor="#333333"/>
+			<topPen lineWidth="0.25" lineColor="#333333"/>
+			<leftPen lineWidth="0.25" lineColor="#333333"/>
+			<bottomPen lineWidth="0.25" lineColor="#333333"/>
+			<rightPen lineWidth="0.25" lineColor="#333333"/>
+		</box>
+	</style>
+	<style name="box_1" style="padding_1" mode="Opaque" forecolor="#333333" backcolor="#F2F2F2" fill="Solid" fontName="Verdana" fontSize="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="0">
+			<pen lineWidth="0.25" lineColor="#333333"/>
+			<topPen lineWidth="0.25" lineColor="#333333"/>
+			<leftPen lineWidth="0.0" lineColor="#333333"/>
+			<bottomPen lineWidth="0.25" lineColor="#333333"/>
+			<rightPen lineWidth="0.25" lineColor="#333333"/>
+		</box>
+	</style>
+	<style name="box_1_1" style="padding_1" mode="Opaque" forecolor="#333333" backcolor="#F2F2F2" fill="Solid" fontName="Verdana" fontSize="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false">
+		<box topPadding="2" leftPadding="2" bottomPadding="2" rightPadding="2">
+			<pen lineWidth="0.5" lineColor="#333333"/>
+			<topPen lineWidth="0.25" lineColor="#333333"/>
+			<leftPen lineWidth="0.0" lineColor="#333333"/>
+			<bottomPen lineWidth="0.25" lineColor="#333333"/>
+			<rightPen lineWidth="0.5" lineColor="#333333"/>
+		</box>
+	</style>
+	<subDataset name="sellers" uuid="7fd1c96f-7807-4c2e-aab6-3b1ba0b74883">
+		<parameter name="TOTAL" class="java.lang.String"/>
+		<field name="nombre" class="java.lang.String"/>
+		<field name="value" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="infrastructures" uuid="430aca53-1378-496a-95bd-7f33f9111d01">
+		<parameter name="TOTAL" class="java.lang.String"/>
+		<field name="nombre" class="java.lang.String"/>
+		<field name="value" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="licenses" uuid="43db1926-2fd6-46c7-be64-683c232b50d2">
+		<parameter name="TOTAL" class="java.lang.String"/>
+		<field name="nombre" class="java.lang.String"/>
+		<field name="value" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="work" uuid="1d4c4064-01a8-4031-965c-ad4fff0c67b6">
+		<parameter name="TOTAL" class="java.lang.String"/>
+		<parameter name="EFFORT" class="java.lang.String"/>
+		<field name="name" class="java.lang.String"/>
+		<field name="department" class="java.lang.String"/>
+		<field name="effort" class="java.lang.String"/>
+		<field name="rate" class="java.lang.String"/>
+		<field name="workCost" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="documents" uuid="435e44eb-b02d-471e-9ee7-90624a2cf239">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="nombre" class="java.lang.String">
+			<fieldDescription><![CDATA[nombre]]></fieldDescription>
+		</field>
+		<field name="value" class="java.lang.String">
+			<fieldDescription><![CDATA[value]]></fieldDescription>
+		</field>
+	</subDataset>
+	<parameter name="IMG_DIR" class="java.lang.String"/>
+	<field name="projectName" class="java.lang.String"/>
+	<field name="projectManager" class="java.lang.String"/>
+	<field name="budgetYear" class="java.lang.String"/>
+	<field name="code" class="java.lang.String"/>
+	<field name="program" class="java.lang.String"/>
+	<field name="objetivos" class="java.lang.String"/>
+	<field name="sponsor" class="java.lang.String"/>
+	<field name="descripcion" class="java.lang.String"/>
+	<field name="businessNeed" class="java.lang.String"/>
+	<field name="restricciones" class="java.lang.String"/>
+	<field name="principalesRiesgos" class="java.lang.String"/>
+	<field name="supuestos" class="java.lang.String"/>
+	<field name="entregables" class="java.lang.String"/>
+	<field name="exclusiones" class="java.lang.String"/>
+	<field name="plannedStartDate" class="java.lang.String"/>
+	<field name="plannedFinishDate" class="java.lang.String"/>
+	<field name="duration" class="java.lang.String"/>
+	<field name="expenses" class="java.lang.String"/>
+	<field name="workCosts" class="java.lang.String"/>
+	<field name="po" class="java.lang.String"/>
+	<field name="investmentManager" class="java.lang.String"/>
+	<field name="sellersCost" class="java.lang.String"/>
+	<field name="sellers" class="java.lang.Object"/>
+	<field name="afecta" class="java.lang.Object"/>
+	<field name="depende" class="java.lang.Object"/>
+	<field name="infrastructures" class="java.lang.Object"/>
+	<field name="licenses" class="java.lang.Object"/>
+	<field name="infrastructuresCost" class="java.lang.String"/>
+	<field name="licensesCost" class="java.lang.String"/>
+	<field name="leadsAndDependents" class="java.lang.Object"/>
+	<field name="works" class="java.lang.Object"/>
+	<field name="effort" class="java.lang.String"/>
+	<field name="budget" class="java.lang.String"/>
+	<field name="logo" class="java.io.InputStream"/>
+	<field name="priority" class="java.lang.String"/>
+	<field name="totalValue" class="java.lang.String"/>
+	<field name="contractType" class="java.lang.String"/>
+	<field name="accountingCode" class="java.lang.String"/>
+	<field name="customer" class="java.lang.String"/>
+	<field name="documents" class="java.lang.Object"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="74" splitType="Stretch">
+			<image vAlign="Bottom" isUsingCache="true">
+				<reportElement uuid="b03274aa-f30d-4c6e-9437-8982e7f81da6" x="0" y="2" width="231" height="58"/>
+				<imageExpression><![CDATA[$F{logo}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement uuid="b587f462-01fd-40b1-9125-39eb20b06379" style="header" x="231" y="16" width="324" height="24"/>
+				<textElement textAlignment="Right" verticalAlignment="Bottom"/>
+				<textFieldExpression><![CDATA[$F{po}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="1aab3c74-ed9f-4f78-8256-0108bec841dc" style="headerBox" x="231" y="40" width="324" height="25"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Project Charter]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="10"/>
+	</columnHeader>
+	<detail>
+		<band height="114" splitType="Prevent">
+			<staticText>
+				<reportElement uuid="b8192d4c-15bf-4d53-9dd0-3d0f9efd9e94" style="headerBox" x="0" y="0" width="360" height="14"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Project Name:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fa041e0d-8a93-49cc-bed0-72704a725432" style="headerBox" x="360" y="0" width="86" height="14"/>
+				<textElement/>
+				<text><![CDATA[Budget Year:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="007ebc1e-e058-4ac4-adb4-d246b15f5674" style="importantBox" mode="Opaque" x="0" y="14" width="360" height="14" backcolor="#DBE5F1"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{projectName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="e14c115a-0102-4307-bb64-5a9396e2de24" style="headerBox" x="0" y="28" width="276" height="14"/>
+				<textElement/>
+				<text><![CDATA[Project Manager:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="645486d8-50b9-4e7c-a968-ea192e7b3c5f" style="headerBox" x="276" y="28" width="279" height="14"/>
+				<textElement/>
+				<text><![CDATA[Program:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="828adf93-c227-4a3d-84d4-84b2bf72810b" style="box" x="0" y="42" width="276" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{projectManager}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="40a7f4fb-d524-43d3-ad7a-533b0035b1c7" style="box" x="276" y="42" width="279" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{program}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="f9133308-7f07-40a6-82fb-d52bbd77132c" style="box" x="276" y="71" width="279" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{customer}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="b5d96c59-ffe9-44f9-9112-c853ee3100a7" style="headerBox" x="0" y="57" width="276" height="14"/>
+				<textElement/>
+				<text><![CDATA[Sponsor:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="949ea573-3bd1-4faf-a759-3e5d7fc28ff1" style="headerBox" x="276" y="57" width="279" height="14"/>
+				<textElement/>
+				<text><![CDATA[Client:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="8c34007d-27a3-4a50-beb0-d522430f022e" style="headerBox" x="185" y="85" width="183" height="14"/>
+				<textElement/>
+				<text><![CDATA[Budget At Completion (BAC):]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="6ebb9374-bccb-4217-b40a-52aa7266d05e" style="box" x="185" y="99" width="183" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{budget}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="b2591ca3-adb6-4be8-b610-9ebbb85435d7" style="box" x="0" y="71" width="276" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{sponsor}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="4e97f3bf-6a7c-4643-9bed-44b250fad98f" style="box" x="446" y="14" width="109" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{accountingCode}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="b631d43a-a91d-48bb-91f8-131fdc0793c4" style="headerBox" x="446" y="0" width="109" height="14"/>
+				<textElement/>
+				<text><![CDATA[Project Code:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="19e0e8f8-2201-4778-bf79-ff36ec96d494" style="box" x="360" y="14" width="86" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{budgetYear}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="dadeef3c-d0bc-4dc5-b6c6-162fab4de67b" style="headerBox" x="0" y="85" width="185" height="14"/>
+				<textElement/>
+				<text><![CDATA[Total Value:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="3286f509-10a5-45fd-87f8-4e1ca7b797de" style="box" x="0" y="99" width="185" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{totalValue}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="7c7e6472-ed08-400f-a0c7-5f393f90ceed" style="headerBox" x="368" y="85" width="187" height="14"/>
+				<textElement/>
+				<text><![CDATA[Priority:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="82960715-2984-4b88-b198-d2b2d367e095" style="box" x="368" y="99" width="187" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{priority}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="10" splitType="Prevent"/>
+		<band height="64" splitType="Prevent">
+			<staticText>
+				<reportElement uuid="48634f88-cbc7-4cda-aa5a-0dc4f1987a07" style="headerBox" x="0" y="0" width="555" height="14"/>
+				<textElement/>
+				<text><![CDATA[Business needs:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="758bdc1b-d2b1-4c00-a89f-bf817a6ab583" style="box" x="0" y="14" width="555" height="50"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{businessNeed}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="10" splitType="Prevent"/>
+		<band height="64" splitType="Prevent">
+			<staticText>
+				<reportElement uuid="33e87057-dcd2-49a4-85ff-d0c90413611e" style="headerBox" x="0" y="0" width="555" height="14"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Objectives:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="e392b6c8-dbd4-4d0b-a760-dbab0f521442" style="box" x="0" y="14" width="555" height="50"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{objetivos}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="10" splitType="Prevent"/>
+		<band height="64" splitType="Prevent">
+			<staticText>
+				<reportElement uuid="0dab2edd-9f07-4e61-b82e-ca6e64457f1d" style="headerBox" x="0" y="0" width="555" height="14"/>
+				<textElement/>
+				<text><![CDATA[Constraints:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="937f7eb5-310c-4b61-b52b-e094045a683b" style="box" x="0" y="14" width="555" height="50"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{restricciones}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="10" splitType="Prevent"/>
+		<band height="64" splitType="Prevent">
+			<staticText>
+				<reportElement uuid="f937ad90-3408-4ddc-937f-82fed871f42a" style="headerBox" x="0" y="0" width="555" height="14"/>
+				<textElement/>
+				<text><![CDATA[Risks:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="45a1a924-853a-4be0-a9d4-7b6cc66f9623" style="box" x="0" y="14" width="555" height="50"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{principalesRiesgos}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="10" splitType="Prevent"/>
+		<band height="64" splitType="Prevent">
+			<staticText>
+				<reportElement uuid="77b4bdbd-0745-41b5-a04e-eff67df7d48e" style="headerBox" x="0" y="0" width="555" height="14"/>
+				<textElement/>
+				<text><![CDATA[Assumptions:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="15eb068a-a7ca-4b8c-bba9-34c34b6b48fb" style="box" x="0" y="14" width="555" height="50"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{supuestos}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="10" splitType="Prevent"/>
+		<band height="64" splitType="Prevent">
+			<staticText>
+				<reportElement uuid="01f901a7-8604-41c1-8b37-5a5532d0c38d" style="headerBox" x="0" y="0" width="555" height="14"/>
+				<textElement/>
+				<text><![CDATA[Deliverables:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="3bff1c8f-5635-4db3-90f5-2b1b484b2f4f" style="box" x="0" y="14" width="555" height="50"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{entregables}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="10" splitType="Prevent"/>
+		<band height="64" splitType="Prevent">
+			<staticText>
+				<reportElement uuid="dd42b59c-1e51-4c39-8353-a8c9452fb75c" style="headerBox" x="0" y="0" width="555" height="14"/>
+				<textElement/>
+				<text><![CDATA[Exclusions:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="be9e0ee1-8b3a-4e24-a9c3-59ee2abe55f2" style="box" x="0" y="14" width="555" height="50"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{exclusiones}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="10" splitType="Prevent"/>
+		<band height="56" splitType="Prevent">
+			<staticText>
+				<reportElement uuid="448e1b8c-468f-4138-995b-46dad541b8a6" style="headerBox" x="0" y="0" width="185" height="14"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Baseline Start:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="78445015-e35c-4abc-af03-bc97ba3c1b93" style="box" x="372" y="14" width="183" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{duration}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="a4cd81e1-bebc-4072-bb77-c4c9affb4b24" style="headerBox" x="185" y="0" width="187" height="14"/>
+				<textElement/>
+				<text><![CDATA[Baseline Finish:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="81d4c75a-194c-4768-90dd-2fd71d0b41c8" style="headerBox" x="372" y="0" width="183" height="14"/>
+				<textElement/>
+				<text><![CDATA[Planned Duration (days):]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="2a540707-e583-4537-9e60-3082a3c0e236" style="box" x="0" y="14" width="185" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{plannedStartDate}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="1c187af2-3895-4853-8dd5-f922830b98b8" style="box" x="185" y="14" width="187" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{plannedFinishDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="f492abd1-e61c-4868-9a68-a59ac172db71" style="headerBox" x="0" y="28" width="276" height="14"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[External Cost (1)+(2)+(3)]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="b7d6a068-f5b5-436e-8e6c-482afe6a4c2b" style="box" x="0" y="42" width="276" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{expenses}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="72fcf166-f790-4864-9a6b-d7da7f6539d6" style="box" x="276" y="42" width="279" height="14"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{workCosts}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="addd770f-be60-48a0-ac4c-ffa98a1fd540" style="headerBox" x="276" y="28" width="279" height="14"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Internal Cost:]]></text>
+			</staticText>
+		</band>
+		<band height="10">
+			<printWhenExpression><![CDATA[$F{sellers} != null]]></printWhenExpression>
+		</band>
+		<band height="30">
+			<printWhenExpression><![CDATA[$F{sellers} != null]]></printWhenExpression>
+			<componentElement>
+				<reportElement uuid="eba57522-ca39-4edb-a53d-08f53e6897c4" key="table 1" mode="Transparent" x="0" y="0" width="555" height="30"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="sellers" uuid="e99770e2-cf78-491a-9f83-4254f1fbf159">
+						<datasetParameter name="TOTAL">
+							<datasetParameterExpression><![CDATA[$F{sellersCost}]]></datasetParameterExpression>
+						</datasetParameter>
+						<dataSourceExpression><![CDATA[$F{sellers}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="434" uuid="af8ff814-21d2-4756-8fbd-eeca170e9f4b">
+						<jr:columnHeader height="14" rowSpan="1">
+							<staticText>
+								<reportElement uuid="a8dff686-3c2a-4504-a862-63b3c77a4ad1" style="headerBox" x="0" y="0" width="434" height="14"/>
+								<textElement/>
+								<text><![CDATA[Seller Costs (1):]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="14" rowSpan="1">
+							<textField>
+								<reportElement uuid="146a84c8-a083-455b-88cc-207b6e752d22" style="text" mode="Transparent" x="0" y="0" width="434" height="14"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="120" uuid="f16545ee-cd62-4fc1-8a44-cbfec4ce79be">
+						<jr:columnHeader height="14" rowSpan="1">
+							<textField pattern="">
+								<reportElement uuid="6c9c06f3-b961-4972-b8d4-353351521c3b" style="text" mode="Transparent" x="36" y="0" width="84" height="14" backcolor="#FFFFFF"/>
+								<textElement>
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{TOTAL}]]></textFieldExpression>
+							</textField>
+							<staticText>
+								<reportElement uuid="b8d51f6d-7454-4b22-8c41-6743e8468f5e" style="headerBox" x="0" y="0" width="36" height="14"/>
+								<textElement>
+									<font size="8"/>
+								</textElement>
+								<text><![CDATA[Total:]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="14" rowSpan="1">
+							<box rightPadding="0"/>
+							<textField>
+								<reportElement uuid="94e1be65-9d8c-4c21-8388-3e9476ebec5a" style="text" mode="Transparent" x="0" y="0" width="120" height="14"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$F{value}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="10">
+			<printWhenExpression><![CDATA[$F{infrastructures} != null]]></printWhenExpression>
+		</band>
+		<band height="30">
+			<printWhenExpression><![CDATA[$F{infrastructures} != null]]></printWhenExpression>
+			<componentElement>
+				<reportElement uuid="94b9ce0a-48b7-4f30-83f5-23c86c4b783c" key="table 1" x="0" y="0" width="555" height="30"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="infrastructures" uuid="1f5ce721-04ed-4abe-88a1-0c1a5e757c9a">
+						<datasetParameter name="TOTAL">
+							<datasetParameterExpression><![CDATA[$F{infrastructuresCost}]]></datasetParameterExpression>
+						</datasetParameter>
+						<dataSourceExpression><![CDATA[$F{infrastructures}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="434" uuid="25c84824-436e-4f6f-b197-349422dac9a8">
+						<jr:columnHeader height="14" rowSpan="1">
+							<staticText>
+								<reportElement uuid="607c2f86-3e58-4ed9-8bf7-f2ad95ea91aa" style="headerBox" x="0" y="0" width="434" height="14"/>
+								<textElement/>
+								<text><![CDATA[Infrastructure Costs (2):]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="14" rowSpan="1">
+							<textField>
+								<reportElement uuid="08d16b03-d88d-40da-8537-49d7972e0a45" style="text" mode="Transparent" x="0" y="0" width="434" height="14"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="120" uuid="ad4b1d20-4e86-4603-a688-f17896130327">
+						<jr:columnHeader height="14" rowSpan="1">
+							<textField pattern="">
+								<reportElement uuid="14cc4453-19d8-4aec-bc6f-127a8fa5a575" style="text" x="36" y="0" width="84" height="14" backcolor="#FFFFFF"/>
+								<textElement>
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{TOTAL}]]></textFieldExpression>
+							</textField>
+							<staticText>
+								<reportElement uuid="240b3572-010d-427d-aea5-df2d062d2b0e" style="headerBox" x="0" y="0" width="36" height="14"/>
+								<textElement>
+									<font size="8"/>
+								</textElement>
+								<text><![CDATA[Total:]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="14" rowSpan="1">
+							<textField>
+								<reportElement uuid="128f50f0-0da4-4591-8448-341f4ef3f863" style="text" x="0" y="0" width="120" height="14"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$F{value}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="10">
+			<printWhenExpression><![CDATA[$F{licenses} != null]]></printWhenExpression>
+		</band>
+		<band height="30">
+			<printWhenExpression><![CDATA[$F{licenses} != null]]></printWhenExpression>
+			<componentElement>
+				<reportElement uuid="0316f8c0-b3a7-43e7-8139-c3cc7dafcca3" key="table 1" x="0" y="0" width="555" height="30"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="licenses" uuid="4311ae9e-b7d9-448a-81ca-5d9a57e6b957">
+						<datasetParameter name="TOTAL">
+							<datasetParameterExpression><![CDATA[$F{licensesCost}]]></datasetParameterExpression>
+						</datasetParameter>
+						<dataSourceExpression><![CDATA[$F{licenses}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="434" uuid="8c3e9543-3e1b-4819-9615-165851b14a87">
+						<jr:columnHeader height="14" rowSpan="1">
+							<staticText>
+								<reportElement uuid="9d46d7aa-eaac-499b-915b-bbde922b55c3" style="headerBox" x="0" y="0" width="434" height="14"/>
+								<textElement/>
+								<text><![CDATA[License Costs (3):]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="14" rowSpan="1">
+							<textField>
+								<reportElement uuid="b4e83c4c-cd5e-414f-8cc9-0eee68d3cd13" style="text" mode="Transparent" x="0" y="0" width="434" height="14"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="120" uuid="30d1e1c9-7f7d-4321-9a7e-32af04977b4e">
+						<jr:columnHeader height="14" rowSpan="1">
+							<textField pattern="">
+								<reportElement uuid="cf20a02e-4340-455b-8937-cdf643eeb351" style="text" x="36" y="0" width="84" height="14" backcolor="#FFFFFF"/>
+								<textElement>
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{TOTAL}]]></textFieldExpression>
+							</textField>
+							<staticText>
+								<reportElement uuid="caf8cff1-93b6-4b75-81be-a4eb3e4b8e1f" style="headerBox" x="0" y="0" width="36" height="14"/>
+								<textElement>
+									<font size="8"/>
+								</textElement>
+								<text><![CDATA[Total:]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="14" rowSpan="1">
+							<textField>
+								<reportElement uuid="eda453f3-e2b9-4304-858a-ff390cdb7628" style="text" x="0" y="0" width="120" height="14"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$F{value}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="10">
+			<printWhenExpression><![CDATA[$F{works} != null]]></printWhenExpression>
+		</band>
+		<band height="40">
+			<printWhenExpression><![CDATA[$F{works} != null]]></printWhenExpression>
+			<componentElement>
+				<reportElement uuid="d94bb5fa-34fc-41cf-9bfe-eadc47654b25" key="table 1" x="0" y="0" width="555" height="40"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="work" uuid="1ee057e3-064e-4d80-9cd4-dc3dc47daae2">
+						<datasetParameter name="TOTAL">
+							<datasetParameterExpression><![CDATA[$F{workCosts}]]></datasetParameterExpression>
+						</datasetParameter>
+						<datasetParameter name="EFFORT">
+							<datasetParameterExpression><![CDATA[$F{effort}]]></datasetParameterExpression>
+						</datasetParameter>
+						<dataSourceExpression><![CDATA[$F{works}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="173" uuid="0260657b-d771-4a0d-80fe-31110d458f7c">
+						<jr:tableHeader height="15" rowSpan="1">
+							<staticText>
+								<reportElement uuid="0a85fe69-e923-42c0-adf8-55f9252a5566" style="headerBox" x="0" y="0" width="173" height="15"/>
+								<textElement/>
+								<text><![CDATA[Direct Costs (4):]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader height="14" rowSpan="1">
+							<staticText>
+								<reportElement uuid="aaa9365d-5211-447f-8ba6-9f7e134488e3" style="headerBox" x="0" y="0" width="173" height="14"/>
+								<textElement/>
+								<text><![CDATA[Resource:]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="15" rowSpan="1">
+							<textField>
+								<reportElement uuid="b979353d-222b-4e02-87e5-6e0eaf471eb1" style="text" mode="Transparent" x="0" y="0" width="173" height="14"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="87" uuid="1d5852c9-e391-48f5-b62e-427b162a9819">
+						<jr:columnHeader height="14" rowSpan="1">
+							<staticText>
+								<reportElement uuid="b33c76b9-8141-44ff-94da-7e3a379f37ef" style="headerBox" x="0" y="0" width="87" height="14"/>
+								<textElement/>
+								<text><![CDATA[Department:]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="15" rowSpan="1">
+							<textField>
+								<reportElement uuid="b942b167-5bd8-4dbf-90be-ef05e7f59b5f" style="text" mode="Transparent" x="0" y="0" width="87" height="14"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$F{department}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="146" uuid="63c9c0b1-2134-4b86-87d5-a8d136695203">
+						<jr:columnHeader height="14" rowSpan="1">
+							<staticText>
+								<reportElement uuid="dea6cf2c-a221-44f7-9217-2de1f06d5ad0" style="headerBox" x="0" y="0" width="102" height="14"/>
+								<textElement>
+									<font size="8"/>
+								</textElement>
+								<text><![CDATA[Effort (hours):]]></text>
+							</staticText>
+							<textField pattern="">
+								<reportElement uuid="01e5b659-9dcb-470b-ab10-2ca8248faa69" style="text" x="102" y="0" width="44" height="14" backcolor="#FFFFFF"/>
+								<textElement>
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$P{EFFORT}]]></textFieldExpression>
+							</textField>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="15" rowSpan="1">
+							<textField>
+								<reportElement uuid="c13a5159-f123-465c-bfad-fe77f919494e" style="text" mode="Transparent" x="0" y="0" width="146" height="14"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$F{effort}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="55" uuid="c6da8328-1630-4613-9f14-f1253c14a080">
+						<jr:tableHeader height="15" rowSpan="1">
+							<staticText>
+								<reportElement uuid="6853f058-34c9-4991-a3a1-a50c8716434d" x="0" y="0" width="55" height="15"/>
+								<textElement/>
+								<text><![CDATA[TOTAL:]]></text>
+							</staticText>
+						</jr:tableHeader>
+						<jr:columnHeader height="14" rowSpan="1">
+							<staticText>
+								<reportElement uuid="322c6545-ce93-42d9-b2ae-135d79e4a959" style="headerBox" x="0" y="0" width="55" height="14"/>
+								<textElement/>
+								<text><![CDATA[Unit Rate:]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="15" rowSpan="1">
+							<textField>
+								<reportElement uuid="b6c354b1-6dc9-4f90-b234-c9a8a6f9088f" style="text" x="0" y="0" width="55" height="14"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$F{rate}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="94" uuid="d5621143-a7a2-4546-a3c6-63fa4265bb99">
+						<jr:tableHeader height="15" rowSpan="1">
+							<textField pattern="">
+								<reportElement uuid="fa51f6a0-c5bb-4835-b4d0-f24abf9a74b1" style="text" x="0" y="0" width="94" height="15" backcolor="#FFFFFF"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$P{TOTAL}]]></textFieldExpression>
+							</textField>
+						</jr:tableHeader>
+						<jr:columnHeader height="14" rowSpan="1">
+							<staticText>
+								<reportElement uuid="26d78e18-8ded-46d3-9627-ddf4bb3b137e" style="headerBox" x="0" y="0" width="94" height="14"/>
+								<textElement/>
+								<text><![CDATA[TOTAL:]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="15" rowSpan="1">
+							<textField>
+								<reportElement uuid="ceca50e4-0365-4224-bc92-3fb17bb927d2" style="text" x="0" y="0" width="94" height="14"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$F{workCost}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="10"/>
+		<band height="41" splitType="Prevent">
+			<printWhenExpression><![CDATA[$F{documents} != null]]></printWhenExpression>
+			<componentElement>
+				<reportElement uuid="665f19c9-b1e4-46ff-a397-c582e7e161ba" key="table 1" x="0" y="0" width="555" height="40"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="documents" uuid="ff2d71ff-4bf8-4561-be4f-918fd3b468a3">
+						<dataSourceExpression><![CDATA[$F{documents}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="234" uuid="0ab41fd3-95c5-4171-a2c2-f5f0210be745">
+						<jr:columnHeader height="14" rowSpan="1">
+							<staticText>
+								<reportElement uuid="dce81fed-63fc-4643-b71a-bad9f076880c" style="headerBox" x="0" y="0" width="234" height="14"/>
+								<textElement/>
+								<text><![CDATA[Document]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="15" rowSpan="1">
+							<textField>
+								<reportElement uuid="f4298f2a-6207-4d15-a142-5038993e8f93" style="text" mode="Transparent" x="0" y="0" width="234" height="15"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="321" uuid="4a447e37-f24c-4ca5-85a1-42f772b9f164">
+						<jr:columnHeader height="14" rowSpan="1">
+							<staticText>
+								<reportElement uuid="60660283-0a8a-4549-b87a-34a278bef403" style="headerBox" x="0" y="0" width="321" height="14"/>
+								<textElement/>
+								<text><![CDATA[URL]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="table_TD" height="15" rowSpan="1">
+							<textField>
+								<reportElement uuid="36f1c810-384f-4c13-8037-3e7b29a5d5d8" style="text" mode="Transparent" x="0" y="0" width="321" height="15"/>
+								<textElement/>
+								<textFieldExpression><![CDATA[$F{value}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="10">
+			<printWhenExpression><![CDATA[$F{documents} != null]]></printWhenExpression>
+		</band>
+		<band height="128">
+			<rectangle>
+				<reportElement uuid="0a321640-09c2-45dc-b6ac-62a2d0e8a23e" x="51" y="42" width="180" height="49" forecolor="#333333"/>
+				<graphicElement>
+					<pen lineWidth="0.25"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="af9aed7a-0478-4384-83b6-7d712af02747" x="328" y="42" width="180" height="49"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineColor="#333333"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="1971760a-8427-4de1-a22c-6e6433beebcb" style="footer" x="0" y="0" width="555" height="18"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[SIGN OFF:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ac88dda9-f5fd-4996-9124-dc54eb0a13ef" style="headerBox" x="51" y="91" width="102" height="14"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Project Manager]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="17e55b7a-80d3-42e4-b1f9-a29328a0d469" style="headerBox" x="328" y="91" width="102" height="14"/>
+				<textElement verticalAlignment="Middle"/>
+				<text><![CDATA[Project Sponsor]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="27">
+			<staticText>
+				<reportElement uuid="d7a15a8d-61af-4ce2-b3ef-49c9638d4a66" x="0" y="0" width="555" height="11"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[OPEN PPM - Open Project Portfolio Management (OpenPPM)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="dee55df7-aa59-49ff-9dd9-fc12f24c6b0f" x="0" y="11" width="555" height="11"/>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[www.sourceforge.net/openppm]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
